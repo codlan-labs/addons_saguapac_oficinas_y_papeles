@@ -1,0 +1,6 @@
+<odoo noupdate="1">
+    <record id="jasper_server" model="ir.config_parameter">
+        <field name="key">jasper_server_id</field>
+        <field name="value"></field>
+    </record>
+</odoo>

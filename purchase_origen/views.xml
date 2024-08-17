@@ -1,0 +1,35 @@
+<odoo>
+    <record id="purchase_order_form" model="ir.ui.view">
+        <field name="name">purchase.order.form.origin</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='currency_id']" position="before">
+                <field name="origin_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="purchase_origin_view_tree" model="ir.ui.view">
+        <field name="name">purchase.origin.view.tree</field>
+        <field name="model">purchase.origin</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="date"/>
+                <field name="partner_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="purchase_origin_action_view_tree" model="ir.actions.act_window">
+        <field name="name">Origenes de compra</field>
+        <field name="res_model">purchase.origin</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_purchase_origin"
+              name="Orígenes de compra"
+              action="purchase_origen.purchase_origin_action_view_tree"
+              parent="purchase.menu_procurement_management"/>
+</odoo>
