@@ -4,5 +4,5 @@
         "security/ir.model.access.xml",
         "views.xml"
     ],
-    "depends":["purchase"]
+    "depends":["purchase","jasper_integration"]
 }

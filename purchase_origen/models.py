@@ -22,3 +22,7 @@ class PurchaseOrder(models.Model):
         if self.origin_id.exists():
             vals.update(ref=self.origin_id.name)
         return vals
+
+    def generar_reporte(self):
+        instance = self.env["jasper.server"].instance_jasper_server()
+
