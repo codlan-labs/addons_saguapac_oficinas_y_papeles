@@ -11,7 +11,7 @@
                     </group>
                 </sheet>
                 <footer>
-                    <button name="action_wizard_report_year" type="object" class="btn-primary" string="Reporte anual"/>
+                    <button name="action_execute_report" type="object" class="btn-primary" string="Generar reporte"/>
                 </footer>
             </form>
         </field>

@@ -7,17 +7,25 @@ class WizardReportYear(models.TransientModel):
     _name = 'report.wizard_report_year'
     _inherit = 'jsr.common'
     _path = 'saguapac/saguapac_report_1'
+    _report_name = 'saguapac_report_year'
 
     year = fields.Integer(string='Year')
 
-    def action_wizard_report_year(self):
-        result = self._execute_report(year=self.year)
-        result_base64 = base64.b64encode(result)
-        attachment_id = self.env['ir.attachment'].create(
-            {"name": f"saguapa_report.{self.suffix}", "datas": result_base64})
-        download_url = f'/web/content/{attachment_id.id}?download=true'
+    def transform_value(self, fld):
+        if fld == 'year':
+            return self.year - 10
+
+        if fld == "partner_id":
+            #hago operacion:
+            return "algo"
+
+        return super(WizardReportYear,self).transform_value(fld)
+
+
+
+    """
+    def mapping_fields(self):
         return {
-            "type": "ir.actions.act_url",
-            "url": download_url,
-            "target": "new"
+            "year": "YEAR",
         }
+    """
