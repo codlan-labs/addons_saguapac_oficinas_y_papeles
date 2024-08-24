@@ -10,9 +10,9 @@
         <field name="perm_write" eval="1"/>
     </record>
 
-    <record id="access_jasper_server_report_user" model="ir.model.access">
-        <field name="name">access.jasper.server.report.user</field>
-        <field name="model_id" ref="jasper_integration.model_jasper_server_report"/>
+    <record id="access_report_wizard_report_year_user" model="ir.model.access">
+        <field name="name">access.report.wizard_report_year.user</field>
+        <field name="model_id" ref="jasper_integration.model_report_wizard_report_year"/>
         <field name="group_id" ref="base.group_user"/>
         <field name="perm_read" eval="1"/>
         <field name="perm_create" eval="1"/>

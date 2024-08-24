@@ -16,13 +16,8 @@ class JasperServer(models.Model):
         jasper_server = self.browse(jasper_server_id)
         username = jasper_server.username
         password = jasper_server.password
-        instance = JsService(username,password)
-        instance.authenticate()
+        host = jasper_server.url
+        instance = JsService(host, username, password)
+        #instance.authenticate()
         return instance
 
-class JasperServerReport(models.Model):
-    _name = 'jasper.server.report'
-
-    name = fields.Char(string='Name')
-
-    jasper_server_id = fields.Many2one('jasper.server', string='Jasper Server')
