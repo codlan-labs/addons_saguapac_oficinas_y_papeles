@@ -1,0 +1,17 @@
+<odoo>
+    <record id="view_view_form_ficha_personal" model="ir.ui.view">
+        <field name="name">Ficha Personal de contacto</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button name="action_report_ficha_personal" string="Generar ficha personal" type="object" icon="fa-print" class="btn-primary"/>
+                </header>
+            </xpath>
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="ficha_personal_doc"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,5 @@
+<odoo>
+    <record id="GOOGLEDRIVE" model="generador.documentos">
+        <field name="service">google_drive</field>
+    </record>
+</odoo>

@@ -1,0 +1,5 @@
+<odoo>
+    <record id="DOCMOSIS" model="generador.documentos">
+        <field name="service">docmosis</field>
+    </record>
+</odoo>

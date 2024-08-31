@@ -1,0 +1,15 @@
+<odoo>
+    <record id="res_config_settings_view_form_generador_documentos" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.generador.documentos</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='integration']" position="inside">
+                <setting>
+                    <field name="service"/>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,6 @@
+<odoo noupdate="1">
+    <record id="DOCMOSISAPIKEY" model="ir.config_parameter">
+        <field name="key">docmosis_api_key</field>
+        <field name="value"></field>
+    </record>
+</odoo>
